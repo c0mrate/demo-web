@@ -9,7 +9,7 @@ input,addEventListener('input' , () => {
     const rxDashSstart = /^-/;
 
     input.value = input.value
-    .replace(rxSpace, '-')
+    .replace(rxSpace, ' ')
     .replace(rxDashes, '-')
     .replace(rxDashSstart, '');
 });
@@ -45,8 +45,3 @@ function sendMessage() {
 // function refreshPage(){
 //     window.location.reload();
 // } 
-
-let apiKey = 'ff7a126bae1a4c7c89e0391d5dca7da2';
-$.getJSON('https://api.ipgeolocation.io/ipgeo?apiKey=' + apiKey, function(data) {
-  console.log(JSON.stringify(data, null, 2));
-});
